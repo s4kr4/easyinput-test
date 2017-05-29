@@ -1,9 +1,10 @@
 {
   "dependencies": {
+    "easyinput": "*",
+    "material-ui": "^0.18.1",
     "next": "^2.4.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "easyinput": "*"
+    "react-dom": "^15.5.4"
   },
   "scripts": {
     "dev": "next",

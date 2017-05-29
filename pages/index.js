@@ -1,5 +1,7 @@
 import { Component } from 'react'
-import { render } from 'react-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import TextField from 'material-ui/TextField'
+
 import EasyInput from 'easyinput'
 
 export default class InputTest extends Component {
@@ -18,10 +20,12 @@ export default class InputTest extends Component {
 
   render() {
     return (
-      <div>
-        test
-        <input type="text" value={this.state.textValue} onKeyDown={this.onKeyDown.bind(this)} />
-      </div>
+      <MuiThemeProvider>
+        <TextField
+          hintText="text"
+          value={ this.state.textValue }
+          onKeyDown={ (event) => this.onKeyDown(event) } />
+      </MuiThemeProvider>
     )
   }
 }
