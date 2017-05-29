@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { render } from 'react-dom'
-import { handleKeyDown } from 'easyinput'
+import EasyInput from 'easyinput'
 
 export default class InputTest extends Component {
   constructor(props) {
@@ -11,10 +11,8 @@ export default class InputTest extends Component {
   }
 
   onKeyDown(event) {
-    console.dir(event.altKey)
-    let ret = handleKeyDown(event)
     this.setState({
-      textValue: handleKeyDown(event)
+      textValue: EasyInput.handleKeyDown(event)
     })
   }
 
